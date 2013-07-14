@@ -41,7 +41,12 @@ module CLI
     rescue Interrupt
       exit 0
     rescue => e
-      raise if @debug
+      if @debug
+        puts ""
+        puts e.backtrace
+        puts ""
+      end
+
       @opts.abort(e.message)
     end
 
