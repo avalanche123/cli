@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{A small command line interface library for quickly building cli apps.}
   gem.summary       = %q{A small command line interface library for quickly building cli apps.}
   gem.homepage      = "https://github.com/avalanche123/cli"
+  gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($/)
   gem.require_paths = ["lib"]
