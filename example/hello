@@ -4,9 +4,9 @@ lib_dir = File.expand_path(File.dirname(__FILE__) + "/../lib")
 
 $LOAD_PATH.unshift(lib_dir) unless $LOAD_PATH.include?(lib_dir)
 
-require 'cli'
+require 'avalanche/cli'
 
-cmd = CLI::Command.new('hello [options] NAME', {
+cmd = Avalanche::CLI::Command.new('hello [options] NAME', {
   :title => ['--title TITLE', String, 'Desired title']
 }, Proc.new do |opts, args|
   raise "NAME is required" if args.empty?

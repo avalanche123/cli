@@ -4,9 +4,9 @@ lib_dir = File.expand_path(File.dirname(__FILE__) + "/../lib")
 
 $LOAD_PATH.unshift(lib_dir) unless $LOAD_PATH.include?(lib_dir)
 
-require 'cli'
+require 'avalanche/cli'
 
-app = CLI::Application.new('app', '0.1.0')
+app = Avalanche::CLI::Application.new('app', '0.1.0')
 
 app.command('hello [options] NAME', "Says Hello", {
   :title => ['--title TITLE', String, 'Desired title']
