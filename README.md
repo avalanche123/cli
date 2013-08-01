@@ -6,7 +6,7 @@ A small command line interface library for quickly building cli apps.
 
 Add this to your Gemfile:
 
-    gem 'cli', :git => 'git://github.com/avalanche123/cli.git'
+    gem 'avalanche-cli', :git => 'git://github.com/avalanche123/cli.git'
 
 Build a single command script:
 
@@ -15,9 +15,9 @@ Build a single command script:
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
-require 'cli'
+require 'avalanche/cli'
 
-cmd = CLI::Command.new('hello [options] NAME', {
+cmd = Avalanche::CLI::Command.new('hello [options] NAME', {
   :title => ['--title TITLE', String, 'Desired title']
 }, Proc.new do |opts, args|
   raise "NAME is required" if args.empty?
@@ -34,9 +34,9 @@ Build a cli application with many subcommands:
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
-require 'cli'
+require 'avalanche/cli'
 
-app = CLI::Application.new('app', '0.1.0')
+app = Avalanche::CLI::Application.new('app', '0.1.0')
 
 app.command('hello [options] NAME', "Says Hello", {
   :title => ['--title TITLE', String, 'Desired title']
