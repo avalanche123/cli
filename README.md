@@ -58,3 +58,7 @@ Check it:
 ## License
 
 MIT
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/avalanche123/cli/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
