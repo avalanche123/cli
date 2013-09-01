@@ -48,7 +48,7 @@ module Avalanche
           puts ""
         end
 
-        @opts.abort(e.message)
+        @opts.abort("#{e.class.name}: #{e.message}")
       end
 
       def to_proc
